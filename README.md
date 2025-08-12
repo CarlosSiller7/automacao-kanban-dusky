@@ -13,7 +13,6 @@ npm ou yarn
 Passos para executar os testes
 
 1 - Clone o repositório
-git clone https://github.com/seu-usuario/automacao-kanban-dusky.git
 
 2 - Entre na pasta do projeto
 cd automacao-kanban-dusky
