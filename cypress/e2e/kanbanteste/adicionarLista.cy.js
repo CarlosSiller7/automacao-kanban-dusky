@@ -1,8 +1,8 @@
 import Chance from "chance";
 const chance = new Chance();
 
-describe("Teste de acesso", () => {
-  it("Deve acessar o site", () => {
+describe("Teste de adição de lista no banban", () => {
+  it("Deve clicar em adicionar uma nova lista e seguir o fluxo", () => {
     cy.acessarSite();
 
     //Variáveis
