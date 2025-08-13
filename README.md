@@ -1,11 +1,7 @@
-Segue um README adaptado em **Markdown** para o seu projeto, já formatado e organizado para ficar claro e fácil de ler:
-
 ---
-
 # 📝 Automação de Testes E2E - Kanban Dusky
 
 Este projeto é uma automação de testes **end-to-end** utilizando o **Cypress** para validar funcionalidades do sistema **Kanban Dusky**.
-
 ---
 
 ## 🚀 Tecnologias Utilizadas
@@ -96,5 +92,3 @@ automacao-kanban-dusky/
 Este projeto é de uso interno e não possui licença pública definida.
 
 ---
-
-Se quiser, posso incluir também um **exemplo prático de comando Cypress** no README para mostrar como rodar testes específicos (por exemplo, só um teste de mover card). Quer que eu adicione?
