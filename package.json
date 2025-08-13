@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "cypress": "^14.5.4"
+    "@4tw/cypress-drag-drop": "^2.3.0",
+    "cypress": "^14.5.4",
+    "cypress-drag-drop": "^1.1.1"
   },
   "name": "automacao-kanban-dusky",
   "version": "1.0.0",

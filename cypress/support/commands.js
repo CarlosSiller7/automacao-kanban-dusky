@@ -1,4 +1,7 @@
 // ***********************************************
+import "@4tw/cypress-drag-drop";
+import { Subject } from "rxjs";
+
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
@@ -27,3 +30,17 @@
 Cypress.Commands.add("acessarSite", () => {
   cy.visit("https://kanban-dusky-five.vercel.app/");
 });
+
+Cypress.Commands.add(
+  "dragTo",
+  { prevSubject: "element" },
+  (subject, targetEl) => {
+    const dataTransfer = new DataTransfer();
+    cy.get(subject).trigger("dragstart", {
+      dataTransfer,
+    });
+    cy.get(targetEl).trigger("drop", {
+      dataTransfer,
+    });
+  }
+);

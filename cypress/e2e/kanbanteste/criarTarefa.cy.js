@@ -3,6 +3,9 @@ const chance = new Chance();
 
 describe("Teste de criação de tarefa", () => {
   it("Deve criar uma tarefa dentro de uma coluna.", () => {
+    // Antes de visitar a página
+    cy.viewport(1920, 1080); // Largura x Altura
+
     cy.acessarSite();
 
     //Variáveis

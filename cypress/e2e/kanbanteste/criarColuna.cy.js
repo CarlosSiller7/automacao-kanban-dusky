@@ -1,8 +1,11 @@
 import Chance from "chance";
 const chance = new Chance();
 
-describe("Teste de adição de lista no banban", () => {
+describe("Teste de adição de coluna no banban", () => {
   it("Deve clicar em adicionar uma nova lista e seguir o fluxo", () => {
+    // Antes de visitar a página
+    cy.viewport(1920, 1080); // Largura x Altura
+
     cy.acessarSite();
 
     //Variáveis

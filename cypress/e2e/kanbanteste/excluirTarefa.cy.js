@@ -3,6 +3,9 @@ const chance = new Chance();
 
 describe("Teste de exclusão de tarefa", () => {
   it("Deve excluir de forma aleatória uma tarefa dentre as 3 colunas", () => {
+    // Antes de visitar a página
+    cy.viewport(1920, 1080); // Largura x Altura
+
     cy.acessarSite();
 
     // O botão de excluir card só aparecer caso o cursor esteja sobre ele. Então essa linha simula um hover
