@@ -14,21 +14,18 @@ Passos para executar os testes
 
 1 - Clone o repositório
 
-2 - Entre na pasta do projeto
-cd automacao-kanban-dusky
+2 - Entre na pasta do projeto: cd automacao-kanban-dusky
 
-3 - Instale as dependências
-
+3 - Instale as dependências:
 npm install
+
 # ou
+
 yarn install
 
-4 - Execute os testes no modo aberto
+4 - Execute os testes no modo aberto:
 npx cypress open
 
 # ou
 
-Execute os testes no modo headles
-npx cypress run
-
-
+Execute os testes no modo headles: npx cypress run
