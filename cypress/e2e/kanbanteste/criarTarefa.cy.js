@@ -3,8 +3,7 @@ const chance = new Chance();
 
 describe("Teste de criação de tarefa", () => {
   it("Deve criar uma tarefa dentro de uma coluna.", () => {
-    // Antes de visitar a página
-    cy.viewport(1920, 1080); // Largura x Altura
+    cy.viewport(1920, 1080);
 
     cy.acessarSite();
 
@@ -118,25 +117,33 @@ describe("Teste de criação de tarefa", () => {
     const taskName =
       chance.pickone(taskPrefixes) + " " + chance.pickone(taskSequences);
 
+    // Variável que randomiza a escolha da coluna
     const index = Math.floor(Math.random() * 3);
 
+    // Variáveis para randomizar a escolha das cores
     const randomIndex = Math.floor(Math.random() * 3);
     const elementId = `#\\3${randomIndex} Color`;
 
+    // Criação da task
     cy.get(".custom-input").eq(index).click();
     cy.get(".sc-gsnTZi").type(taskName);
     cy.get(".btn").click();
 
+    // Clicando no card que acabou de ser criado
     cy.get(".board-cards")
       .eq(index)
       .contains(taskName, { timeout: 5000 })
       .should("be.visible")
       .click();
 
+    // Clicando em uma das cores
     cy.get(elementId).click();
 
     cy.get("section > .custom-input > p").click();
     cy.get(".sc-gsnTZi").type("Tag 1");
     cy.get(".btn").click();
+
+    // Clicar fora para fechar o modal. o Clique é feito no canto superior esquerdo
+    cy.get("body").click(0, 0);
   });
 });

@@ -1,5 +1,3 @@
-import "cypress-drag-drop";
-
 import Chance from "chance";
 const chance = new Chance();
 
